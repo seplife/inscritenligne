@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+
+  --color-maroon: #6E1423;
+  --color-maroon-dark: #450C15;
+  --color-gold: #D9A61E;
+  --color-gold-light: #F4D889;
+  --color-forest: #2F6B3A;
+  --color-forest-dark: #1E4A28;
+  --color-cream: #FBF6EA;
+  --color-cream-dark: #F5EEDC;
+  --color-paper: #FFFFFF;
+  --color-ink: #221812;
+  --color-ink-soft: #6B5B4E;
+  --color-line: #E7DCC7;
+}
+
+:root {
+  --maroon: #6E1423;
+  --maroon-dark: #450C15;
+  --gold: #D9A61E;
+  --gold-light: #F4D889;
+  --forest: #2F6B3A;
+  --forest-dark: #1E4A28;
+  --cream: #FBF6EA;
+  --paper: #FFFFFF;
+  --ink: #221812;
+  --ink-soft: #6B5B4E;
+  --line: #E7DCC7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--ink);
+  background-color: var(--cream);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', serif;
+}
+
+/* Print Styles */
+@media print {
+  header, footer, nav, .no-print, button:not(.print-include) {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-shadow-none {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
+
